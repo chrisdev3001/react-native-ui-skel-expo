@@ -1,10 +1,19 @@
 {
-  "name": "react-native-ui-skel",
-  "version": "1.2.0",
-  "description": "A simple React Native component that implements a Skeleton UI.",
-  "main": "index.js",
+  "name": "react-native-ui-skel-expo",
+  "version": "1.2.1",
+  "description": "A simple React Native component that implements a Skeleton UI using Expo.",
+  "main": "./package/src/index.js",
+  "types": "./package/src/index.d.ts",
+  "files": [
+    "./package/src",
+    "!**/*.test.*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs",
+    "build": "npm run build:esm && npm run build:cjs",
+    "publish:local": "npm run build && npm publish --registry http://localhost:4873"
   },
   "repository": {
     "type": "git",
@@ -26,7 +35,17 @@
     "url": "https://github.com/chrisdev3001/react-native-ui-skel/issues"
   },
   "homepage": "https://github.com/chrisdev3001/react-native-ui-skel#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "expo": "^50.0.13",
+    "react-native": "^0.73.6",
+    "expo-linear-gradient": "12.7.2"
+  },
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.74.1"
+    "@types/react": "^18.2.66",
+    "metro-react-native-babel-preset": "^0.74.1",
+    "typescript": "^5.4.2"
   }
 }

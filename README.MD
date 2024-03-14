@@ -1,7 +1,7 @@
 
-# react-native-ui-skel
+# react-native-ui-skel-expo
 
-![Alt Text](https://firebasestorage.googleapis.com/v0/b/chris-github.appspot.com/o/uiSkelGif2.gif?alt=media&token=4ace2d03-265c-4e61-8de4-4bf326009bd9)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/chrisdev3001-2.appspot.com/o/skel-gif-example.gif?alt=media&token=09edb4ba-3e94-43e8-881c-9af02da7bf52)
 
 ## Documentation
 A simple React Native component that implements a Skeleton UI.
@@ -13,25 +13,19 @@ If you are using Expo, please use this lib:
 1. Install your skel
 
 ```bash
-npm i react-native-ui-skel
+npm i react-native-ui-skel-expo
 ```
 
-2. install react-native-linear-gradient (if you have it, omit this step 2 and 3)
+2. install expo-linear-gradient (if you already have it, jump this step)
 
 ```bash
-npm i react-native-linear-gradient
-```
-
-3. install new pods
-
-```bash
-npx pod-install
+npm i expo-linear-gradient
 ```
 
 ## Usage/Examples
 
 ```javascript
-import { Skel } from 'react-native-ui-skel'
+import { Skel } from 'react-native-ui-skel-expo'
 
 <View>
     <Skel 
