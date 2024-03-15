@@ -7,8 +7,8 @@
 A simple React Native component that implements a Skeleton UI.
 It will performance your react-native app and you will get more fps.
 
-If you are using Expo, please use this lib:
-[react-native-ui-skel-expo](https://www.npmjs.com/package/react-native-ui-skel-expo)
+If you are using bare React Native, please use this lib:
+[react-native-ui-skel](https://www.npmjs.com/package/react-native-ui-skel)
 
 1. Install your skel
 
