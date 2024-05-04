@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react'
-import { View, StyleSheet, Animated, ViewStyle, StyleProp } from 'react-native'
+import { View, StyleSheet, Animated, ViewStyle, StyleProp, ViewProps } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 
-interface SkelProps{
+interface SkelProps extends ViewProps {
   width: number,
   height: number,
   duration?: number,
@@ -17,7 +17,8 @@ export const Skel = ({
   duration = 1000,
   backgroundColor= '#EBEFF5', 
   backgroundAnimationColor = ['transparent', "rgba(0,0,0, 0.03)", 'transparent'], 
-  styles = {}
+  styles = {},
+  ...props
 }: SkelProps) => {
   const translateX = useRef(new Animated.Value(-width)).current
 
@@ -42,7 +43,9 @@ export const Skel = ({
           overflow: 'hidden'
         },
         styles
-      ])}>
+      ])}
+      {...props}
+    >
       <Animated.View style={{
         width: '100%',
         height: '100%',
