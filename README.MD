@@ -1,7 +1,11 @@
 
 # react-native-ui-skel-expo
 
-![Alt Text](https://firebasestorage.googleapis.com/v0/b/chrisdev3001-2.appspot.com/o/skel-gif-example.gif?alt=media&token=09edb4ba-3e94-43e8-881c-9af02da7bf52)
+![Alt Text](https://github.com/chrisdev3001/react-native-ui-skel/blob/master/skel1.gif?raw=true)
+
+![Alt Text](https://github.com/chrisdev3001/react-native-ui-skel/blob/master/skel2.gif?raw=true)
+
+Note: gift are just examples, and are not syncronius because they were converted
 
 ## Documentation
 A simple React Native component that implements a Skeleton UI.
