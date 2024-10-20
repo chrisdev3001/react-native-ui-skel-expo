@@ -11,18 +11,20 @@ interface SkelProps extends ViewProps {
   styles: StyleProp<ViewStyle>
 }
 
-export const Skel = ({ 
-  width, 
+const HUNDRED_PERCENT = '100%'
+
+export const Skel = ({
+  width,
   height,
   duration = 1000,
-  backgroundColor= '#EBEFF5', 
-  backgroundAnimationColor = ['transparent', "rgba(0,0,0, 0.03)", 'transparent'], 
+  backgroundColor = '#EBEFF5',
+  backgroundAnimationColor = ['transparent', "rgba(0,0,0, 0.03)", 'transparent'],
   styles = {},
   ...props
 }: SkelProps) => {
   const translateX = useRef(new Animated.Value(-width)).current
 
-  useEffect(()=> {
+  useEffect(() => {
     Animated.loop(
       Animated.timing(translateX, {
         toValue: width,
@@ -30,15 +32,15 @@ export const Skel = ({
         duration
       })
     ).start()
-    
+
   }, [width])
 
   return (
     <View
       style={StyleSheet.flatten([
-        { 
-          width, 
-          height, 
+        {
+          width,
+          height,
           backgroundColor,
           overflow: 'hidden'
         },
@@ -47,12 +49,12 @@ export const Skel = ({
       {...props}
     >
       <Animated.View style={{
-        width: '100%',
-        height: '100%',
+        width: HUNDRED_PERCENT,
+        height: HUNDRED_PERCENT,
         transform: [{ translateX: translateX }]
       }}>
         <LinearGradient
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: HUNDRED_PERCENT, height: HUNDRED_PERCENT }}
           colors={backgroundAnimationColor}
           start={{ x: 1, y: 1 }}
         />
